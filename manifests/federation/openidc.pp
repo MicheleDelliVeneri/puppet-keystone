@@ -238,7 +238,7 @@ class keystone::federation::openidc (
   }
 
   concat::fragment { 'configure_openidc_keystone':
-    target  => "${keystone::wsgi::apache::priority}-keystone_wsgi.conf",
+    target  => '10-keystone_wsgi.conf',
     content => template('keystone/openidc.conf.erb'),
     order   => $template_order,
   }
