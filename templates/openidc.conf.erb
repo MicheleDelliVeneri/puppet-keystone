@@ -1,7 +1,7 @@
   OIDCClaimPrefix "OIDC-"
   OIDCResponseType "<%= scope['keystone::federation::openidc::openidc_response_type']-%>"
   OIDCScope "openid email profile"
-  OIDCProviderMetadataURL <%= scope['keystone::federation::openidc::openidc_provider_metadata_url']-%>
+  OIDCProviderMetadataURL "<%= scope['keystone::federation::openidc::openidc_provider_metadata_url']-%>"
   OIDCClientID "<%= scope['keystone::federation::openidc::openidc_client_id']-%>"
   OIDCClientSecret "<%= scope['keystone::federation::openidc::openidc_client_secret']-%>"
   OIDCCryptoPassphrase "<%= scope['keystone::federation::openidc::openidc_crypto_passphrase']-%>"
@@ -49,7 +49,7 @@
   <%- if scope['keystone::federation::openidc::openidc_verify_method'] == 'introspection' -%>
   OIDCOAuthClientID "<%= scope['keystone::federation::openidc::openidc_client_id']-%>"
   OIDCOAuthClientSecret "<%= scope['keystone::federation::openidc::openidc_client_secret']-%>"
-  OIDCOAuthIntrospectionEndpoint <%= scope['keystone::federation::openidc::openidc_introspection_endpoint']-%>
+  OIDCOAuthIntrospectionEndpoint "<%= scope['keystone::federation::openidc::openidc_introspection_endpoint']-%>"
   <%- elsif scope['keystone::federation::openidc::openidc_verify_method'] == 'jwks' -%>
   OIDCOAuthVerifyJwksUri "<%= scope['keystone::federation::openidc::openidc_verify_jwks_uri']-%>"
   <%- end -%>
