@@ -44,7 +44,7 @@
 <%- end -%>
 
   OIDCRedirectURI "<%= @keystone_url -%>/v3/auth/OS-FEDERATION/identity_providers/<%= scope['keystone::federation::openidc::idp_name']-%>/protocols/openid/websso"
-  OIDCRedirectURI "<%= @keystone_url -%>/v3/auth/OS-FEDERATION/websso/openid
+  OIDCRedirectURI "<%= @keystone_url -%>/v3/auth/OS-FEDERATION/websso/openid"
 
 <LocationMatch "/v3/auth/OS-FEDERATION/websso/openid">
       AuthType "openid-connect"
